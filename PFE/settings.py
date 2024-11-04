@@ -88,12 +88,8 @@ WSGI_APPLICATION = "PFE.wsgi.application"
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'inspirelimited',
-        'USER': 'postgres',
-        'PASSWORD': '',
-        'HOST': 'localhost',  # Or the IP address of your PostgreSQL server
-        'PORT': '5432',       # Default PostgreSQL port
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',  # This creates the SQLite database file in your project's base directory
     }
 }
 

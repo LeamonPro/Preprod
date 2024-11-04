@@ -32,8 +32,7 @@ def send_reset_password(request,user):
     send_mail(subject,message,email_from,[user.email])
     user_obj=User.objects.get(email=user.email)
 
-from django.core.mail import EmailMessage
-from django.conf import settings
+
 
 def send_infos(request, user):
     subject = 'Hello InspireLimited team, there is a new user who requested an account!'
@@ -47,7 +46,7 @@ def send_infos(request, user):
     """
     
     email_from = settings.DEFAULT_FROM_EMAIL
-    recipient_list = ["haddarskander50@gmail.com"]
+    recipient_list = ["inspiredemo@yopmail.com"]
 
     email = EmailMessage(subject, message, email_from, recipient_list)
 
